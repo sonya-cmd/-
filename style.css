@@ -1,0 +1,733 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 40px;
+  background-image: url('assets/Group 1073713175.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+}
+
+/* Логотип — внутри hero */
+.logo-header {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.logo-icon {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.brand-sub {
+  font-size: 7px;
+  font-weight: 500;
+  color: #606060;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+
+/* Кнопка */
+.explore-btn {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  padding: 10px 22px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 2px solid #f2b84b;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  z-index: 3;
+}
+
+.explore-btn:hover {
+  background-color: #f2b84b;
+  color: white;
+}
+
+/* Контент внутри hero */
+.hero-content {
+  max-width: 600px;
+  margin-left: 60px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 28px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 20px;
+}
+
+.store-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 220px;
+  height: 56px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.store-button img {
+  height: 18px;
+  width: auto;
+  pointer-events: none;
+}
+
+.store-button.google {
+  background: #f2b84b;
+}
+
+.store-button.apple {
+  background: #eb6240;
+}
+
+.store-button:hover {
+  transform: scale(1.05);
+}
+
+/* Изображения справа */
+.hero-images {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 50px;
+  padding-right: 60px;
+  flex: 1;
+}
+
+.device.tablet {
+  position: relative;
+  z-index: 1;
+  width: 600px;
+  transform: translateY(40px) translateX(90px);
+}
+
+.device.phone {
+  position: absolute;
+  z-index: 2;
+  bottom: -40px;
+  left: 50px;
+  width: 297px;
+  height: auto;
+}
+
+.device {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.features {
+  background-color: white;
+  padding: 70px 40px 40px; /* увеличен отступ сверху */
+  text-align: center;
+}
+
+.features-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #32302A;
+  max-width: 763px;
+  margin: 0 auto 24px;
+}
+
+.features-subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #323231;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px 24px 5px; /* убрал нижний padding */
+  width: 290px;
+  min-height: unset; /* удалено ограничение высоты */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+
+.feature-card.wide-card {
+  width: 310px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card img {
+  width: auto;
+  height: 190px;
+  object-fit: contain;
+  margin-bottom: 17px;
+  margin-top: -3px;
+  align-self: center;
+}
+
+.feature-card h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #32302A;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.feature-card p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #323231;
+  text-align: left;
+  width: 100%;
+  padding: 0 7px 21px; /* добавлены отступы снизу и справа */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.easy-shopping {
+  background-image: url('assets/Group 1073713279.svg'); 
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  height: 513px;
+  padding: 150px 20px 80px; /* ⬅ увеличен верхний паддинг */
+  margin-top: 70px;         /* ⬅ отступ сверху от предыдущего блока */
+}
+
+.easy-shopping-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+
+.shopping-left {
+  flex: 1;
+  position: relative;
+  min-width: 280px;
+}
+
+.girl-img {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  transform: translate(80px, -6px); /* ← Сдвиг вправо и вниз */
+}
+
+
+.phone-img {
+  position: absolute;
+  top: 90px; /* ← поднимаем выше (было 20px или больше) */
+  left: 30px;
+  width: 90px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.shopping-right {
+  flex: 1;
+  min-width: 300px;
+  padding-top: 0; /* было 20px, теперь 0 */
+  margin-top: -300px; /* поднимаем блок вверх */
+}
+
+.shopping-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+  max-width: 4300px; 
+}
+
+.shopping-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping-steps li {
+  position: relative;
+  padding-left: 40px; /* ← это определяет положение текста */
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.step-number {
+  position: absolute;
+  left: -4px; 
+  top: 65%; /* ← Центр по вертикали */
+  transform: translateY(-70%); /* ← Смещение вверх ровно на половину высоты */
+  font-weight: 700;
+  font-size: 39px;
+  color: #EFB549;
+  line-height: 1;
+}
+
+
+.circle-img-wrapper {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-310px, -140px); /* сдвиг влево и вверх */
+}
+
+.circle-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.girl-img {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+.circle-img-small {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 170px; /* ← было -40px, теперь выше */
+  right: 170px;
+  z-index: 3;
+}
+
+.circle-img-small .circle-bg-small {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle-img-small .phone-img {
+  position: absolute;
+  z-index: 2;
+  width: 90px;
+  left: 45px;
+  top: -15px; /* ← подняли выше */
+  object-fit: contain;
+}
+
+
+.shopkit-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 60px;
+  background-image: url('assets/bg.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto; /* Растягивает фон по ширине */
+  background-position: center;
+  gap: 40px;
+}
+
+.shopkit-left {
+  max-width: 540px;
+  font-family: 'Quicksand', sans-serif;
+  padding-left: 40px;
+  margin-top: -30px;
+}
+
+.shopkit-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #32302A;
+  margin-bottom: 30px;
+  line-height: 1.6; /* увеличенное межстрочное расстояние */
+}
+
+.shopkit-benefits {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.shopkit-benefits li {
+  font-size: 16px;
+  line-height: 1.3;       /* уменьшенная высота строки */
+  margin-bottom: 6px;     /* уменьшенное расстояние между пунктами */
+  color: #333;
+}
+
+.download-btn {
+   margin-top: 35px;
+  background-color: #EFB549;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid #EFB549;
+  border-radius: 40px;
+  padding: 8px 24px;
+  height: 48px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d49d35;
+}
+
+.shopkit-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phones-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -50px;
+}
+
+
+
+.cta-section {
+  background-image: url('assets/end.svg'); /* фон */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px 30px; /* было 60px, теперь меньше */
+  color: white;
+  margin-top: -100px; /* поднимаем вверх */
+   padding-bottom: 60px;
+}
+
+.cta-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px; /* увеличено расстояние */
+  margin-bottom: -10px;
+  color: #F1F1F1;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px; /* опустить ниже */
+}
+
+.cta-buttons .store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px; /* ← жёстко задаём высоту */
+  width: 237px; /* ← ширина */
+  padding: 0; /* убираем внутренние отступы */
+
+  border-radius: 30px;
+  background: white;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1; /* ← убираем лишнюю высоту */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-buttons .store-button img {
+  height: 18px;
+  width: auto;
+  pointer-events: none;
+}
+
+.cta-buttons .store-button:hover {
+  transform: scale(1.05);
+}
+
+
+
+.site-footer {
+  background-color: #FEF9F9;
+  padding: 70px 60px 60px; /* Увеличили высоту фона */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left {
+  max-width: 480px;
+  flex: 1;
+  padding-left: 57px; /* Сдвиг правее */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px; /* ⬅ увеличено с 16px */
+}
+
+.footer-logo img {
+  height: 42px;
+  width: 42px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-brand .brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.footer-brand .brand-sub {
+  font-size: 9px;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.footer-left p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;          /* 150% эквивалентно */
+  color: #32302A;            /* цвет H1 с макета */
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #323231;            /* Цвет из макета */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;         /* Высота строки 32px */
+  letter-spacing: 0;         /* Без межбуквенного интервала */
+  font-family: 'Quicksand', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #efb549;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #555451;
+  margin-top: 10px;
+  padding-top: 30px;     /* ⬅ увеличен отступ от линии */
+  margin-bottom: 30px;   /* ⬅ добавлен отступ снизу */
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 15px; /* ⬅️ увеличили для смещения вниз */
+}
+
+.footer-app-label {
+  font-weight: 600;
+  color: #32302A;
+  font-size: 15px;
+  margin-bottom: 15px; /* уменьшенное расстояние */
+}
+
+.footer-divider {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px 0 20px;
+  background-color: #ccc;  /* для дебага — видно границы */
+  height: 1px;              /* временный размер, чтобы показалось */
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* увеличено расстояние */
+}
+
+.footer-buttons .store-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 53px; /* фиксированная высота */
+  padding: 0 20px; /* горизонтальные отступы */
+  border-radius: 30px;
+  background: white;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #efb549;
+  min-width: 170px;
+}
+
+
+
+.store-button.white-outline img {
+  width: 16px;
+  height: auto;
+}
+
+.store-button.white-outline:hover {
+  background-color: #fef2db;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .hero-images {
+    justify-content: center;
+  }
+
+  .explore-btn {
+    position: static;
+    margin: 20px auto;
+    display: block;
+  }
+}
